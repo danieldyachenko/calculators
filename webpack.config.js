@@ -6,7 +6,6 @@ module.exports = {
     mode: "development",
     entry: {
         index: './src/index.tsx',
-        print: './src/Print.tsx',
     },
     devtool: 'source-map',
     resolve: {
@@ -34,7 +33,11 @@ module.exports = {
                         loader: "ts-loader"
                     }
                 ]
-            }
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
         ]
     },
 };

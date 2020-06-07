@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Print} from "./Print";
+import {App} from "./App";
+import './index.css';
 
 ReactDOM.render(
-    <Print/>,
+    <App/>,
     document.getElementById("root")
 );
