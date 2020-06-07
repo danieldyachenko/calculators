@@ -44,10 +44,7 @@ export const AreaTriangle = () => {
 
     const setSideA = (sideA: string) => dispatch({type: 'SIDE_A', sideA: Number(sideA)})
 
-
-
     const setSideB = (sideB: string) => dispatch({type: 'SIDE_B', sideB: Number(sideB)})
-
 
     const setSideC = (sideC: string) => dispatch({type: 'SIDE_C', sideC: Number(sideC)})
 

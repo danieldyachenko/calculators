@@ -10,6 +10,12 @@ export const App = () => {
             <ModulesContainer>
                 <Router>
                     <Switch>
+                        <Route path="/area-triangle">
+                            <AreaTriangle/>
+                        </Route>
+                        <Route path="/common-factor">
+                            <CommonFactor/>
+                        </Route>
                         <Route exact path="/">
                             <Link to="/area-triangle">
                                 <ModuleBox>Module1</ModuleBox>
@@ -17,12 +23,6 @@ export const App = () => {
                             <Link to="/common-factor">
                                 <ModuleBox>Module2</ModuleBox>
                             </Link>
-                        </Route>
-                        <Route exact path="/area-triangle">
-                            <AreaTriangle/>
-                        </Route>
-                        <Route exact path="/common-factor">
-                            <CommonFactor/>
                         </Route>
                     </Switch>
                 </Router>
