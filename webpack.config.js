@@ -3,9 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: "development",
+    // mode: "development",
     entry: {
         index: './src/index.tsx',
+        areaTriangle: './src/components/AreaTriangle/AreaTriangle.tsx',
+        commonFactor: './src/components/CommonFactor/CommonFactor.tsx'
     },
     devtool: 'source-map',
     resolve: {
