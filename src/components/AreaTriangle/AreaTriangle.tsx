@@ -1,5 +1,5 @@
 import React, {useReducer} from "react";
-import {AreaTriangleBox, Input} from "./AreaTriangleStyles";
+import {CalculatorBox, Input} from "../common/styles";
 
 interface IState {
     sideA: number | null
@@ -38,27 +38,27 @@ export const AreaTriangle = () => {
         const p = (a + b + c)/2
         const s = Math.sqrt(p * (p - a) * (p - b) * (p - c))
         let result
-        isNaN(s) ? result = 'Такого треугольника не существует' : result = s
+        isNaN(s) ? result = 'There is no such triangle' : result = s
         dispatch({type: 'CALCULATE', result: result})
     }
 
-    const setSideA = (sideA: string) => dispatch({type: 'SIDE_A', sideA: Number(sideA)})
+    const setSideA = sideA => dispatch({type: 'SIDE_A', sideA: Number(sideA)})
 
-    const setSideB = (sideB: string) => dispatch({type: 'SIDE_B', sideB: Number(sideB)})
+    const setSideB = sideB => dispatch({type: 'SIDE_B', sideB: Number(sideB)})
 
-    const setSideC = (sideC: string) => dispatch({type: 'SIDE_C', sideC: Number(sideC)})
+    const setSideC = sideC => dispatch({type: 'SIDE_C', sideC: Number(sideC)})
 
 
     return (
-        <AreaTriangleBox>
-            <p>сторона (a)</p>
+        <CalculatorBox>
+            <p>side (a)</p>
             <Input onChange={event => setSideA(event.target.value)} />
-            <p>сторона (b)</p>
+            <p>side (b)</p>
             <Input onChange={event => setSideB(event.target.value)} />
-            <p>сторона (c)</p>
+            <p>side (c)</p>
             <Input onChange={event => setSideC(event.target.value)} /><br/>
-            <button onClick={() => calculate(state.sideA, state.sideB, state.sideC)}>Calculate</button>
+            <p><button onClick={() => calculate(state.sideA, state.sideB, state.sideC)}>Calculate</button></p>
             <span>result: {state.result}</span>
-        </AreaTriangleBox>
+        </CalculatorBox>
     )
 }
