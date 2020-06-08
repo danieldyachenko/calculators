@@ -18,10 +18,10 @@ export const App = () => {
                         </Route>
                         <Route exact path="/">
                             <Link to="/area-triangle">
-                                <ModuleBox>Module1</ModuleBox>
+                                <ModuleBox>Area triangle</ModuleBox>
                             </Link>
                             <Link to="/common-factor">
-                                <ModuleBox>Module2</ModuleBox>
+                                <ModuleBox>Common factor</ModuleBox>
                             </Link>
                         </Route>
                     </Switch>

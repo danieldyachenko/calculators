@@ -1,11 +1,4 @@
 import styled from "styled-components";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    NavLink,
-    Link
-} from "react-router-dom";
 
 export const FullScreenBox = styled.div`
     width: 100vw;
@@ -28,4 +21,8 @@ export const ModuleBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px;
+    @media screen and (max-width: 900px){
+        width: 200px
+    }
 `;

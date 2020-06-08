@@ -35,7 +35,6 @@ export const CommonFactor = () => {
     const setArgument2 = arg => dispatch({type: 'SET_ARGUMENT_2', argument2: Number(arg)})
 
     const calculate = (x, y) => {
-        console.log(x, y)
         if (y > x) return calculate(y, x);
         if (!y) return x;
         dispatch({type: 'CALCULATE', result: calculate(y, x % y)})

@@ -34,6 +34,12 @@ export const AreaTriangle = () => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
 
+    const setSideA = sideA => dispatch({type: 'SIDE_A', sideA: Number(sideA)})
+
+    const setSideB = sideB => dispatch({type: 'SIDE_B', sideB: Number(sideB)})
+
+    const setSideC = sideC => dispatch({type: 'SIDE_C', sideC: Number(sideC)})
+
     const calculate = (a, b, c) => {
         const p = (a + b + c)/2
         const s = Math.sqrt(p * (p - a) * (p - b) * (p - c))
@@ -41,13 +47,6 @@ export const AreaTriangle = () => {
         isNaN(s) ? result = 'There is no such triangle' : result = s
         dispatch({type: 'CALCULATE', result: result})
     }
-
-    const setSideA = sideA => dispatch({type: 'SIDE_A', sideA: Number(sideA)})
-
-    const setSideB = sideB => dispatch({type: 'SIDE_B', sideB: Number(sideB)})
-
-    const setSideC = sideC => dispatch({type: 'SIDE_C', sideC: Number(sideC)})
-
 
     return (
         <CalculatorBox>
