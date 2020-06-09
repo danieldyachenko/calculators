@@ -1,5 +1,5 @@
 import React, {useReducer} from "react";
-import {CalculatorBox, Input} from "../common/styles";
+import {Button, CalculatorBox, Input} from "../common/styles";
 
 interface IState {
     sideA: number | null
@@ -51,12 +51,12 @@ export const AreaTriangle = () => {
     return (
         <CalculatorBox>
             <p>side (a)</p>
-            <Input onChange={event => setSideA(event.target.value)} />
+            <Input onChange={event => setSideA(event.target.value)}/>
             <p>side (b)</p>
             <Input onChange={event => setSideB(event.target.value)} />
             <p>side (c)</p>
             <Input onChange={event => setSideC(event.target.value)} /><br/>
-            <p><button onClick={() => calculate(state.sideA, state.sideB, state.sideC)}>Calculate</button></p>
+            <p><Button onClick={() => calculate(state.sideA, state.sideB, state.sideC)}>Calculate</Button></p>
             <span>result: {state.result}</span>
         </CalculatorBox>
     )
